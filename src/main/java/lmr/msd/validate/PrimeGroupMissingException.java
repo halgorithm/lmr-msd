@@ -1,7 +1,7 @@
 package lmr.msd.validate;
 
-import lmr.msd.object.Scene;
-import lmr.msd.object.Stage;
+import lmr.msd.models.Scene;
+import lmr.msd.models.Stage;
 
 public class PrimeGroupMissingException extends SceneValidationException {
     public PrimeGroupMissingException(Stage stage, Scene scene) {

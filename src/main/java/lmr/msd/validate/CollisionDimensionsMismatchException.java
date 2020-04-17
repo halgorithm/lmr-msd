@@ -1,7 +1,7 @@
 package lmr.msd.validate;
 
-import lmr.msd.object.Scene;
-import lmr.msd.object.Stage;
+import lmr.msd.models.Scene;
+import lmr.msd.models.Stage;
 
 public class CollisionDimensionsMismatchException extends SceneValidationException {
     public CollisionDimensionsMismatchException(Stage stage, Scene scene) {

@@ -1,7 +1,7 @@
-package lmr.msd.object;
+package lmr.msd.models;
 
-import lmr.msd.object.edit.CollisionRectangleSelection;
-import lmr.msd.object.edit.CollisionScatteredSelection;
+import lmr.msd.models.edit.CollisionRectangleSelection;
+import lmr.msd.models.edit.CollisionScatteredSelection;
 import lmr.msd.tilemap.TileMap;
 
 import java.awt.*;

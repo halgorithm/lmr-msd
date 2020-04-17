@@ -1,4 +1,4 @@
-package lmr.msd.object;
+package lmr.msd.models;
 
 import java.util.Objects;
 
@@ -23,6 +23,10 @@ public final class GfxTile {
         this.blendMode = blendMode;
         this.flipHorizontal = flipHorizontal;
         this.rotations = (byte) rotations;
+    }
+
+    public GfxTile(GfxTile tile) {
+        this(tile.gfxIdx, tile.blendMode, tile.flipHorizontal, tile.rotations);
     }
 
     public boolean equals(GfxTile t) {

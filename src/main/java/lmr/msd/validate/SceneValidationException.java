@@ -1,7 +1,7 @@
 package lmr.msd.validate;
 
-import lmr.msd.object.Scene;
-import lmr.msd.object.Stage;
+import lmr.msd.models.Scene;
+import lmr.msd.models.Stage;
 
 public abstract class SceneValidationException extends MsdValidationException {
     public final Scene scene;

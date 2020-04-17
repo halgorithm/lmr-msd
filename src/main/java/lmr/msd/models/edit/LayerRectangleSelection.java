@@ -1,7 +1,7 @@
-package lmr.msd.object.edit;
+package lmr.msd.models.edit;
 
-import lmr.msd.object.GfxTile;
-import lmr.msd.object.Layer;
+import lmr.msd.models.GfxTile;
+import lmr.msd.models.Layer;
 import lmr.msd.tilemap.RectangleSelection;
 
 import java.awt.*;

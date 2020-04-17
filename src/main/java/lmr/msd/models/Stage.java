@@ -1,6 +1,7 @@
-package lmr.msd.object;
+package lmr.msd.models;
 
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 public final class Stage {
@@ -35,6 +36,14 @@ public final class Stage {
             var fileName = filePath.getFileName().toString();
             if (setIdFromFilename) this.id = parseIdFromFileName(fileName);
         }
+    }
+
+    public List<Byte> generateSceneScreenCounts() {
+        var res = new ArrayList<Byte>(scenes.size());
+        for (var scene : scenes)
+            res.add(scene.screensCount());
+
+        return res;
     }
 
     public static byte parseIdFromFileName(String fileName) {

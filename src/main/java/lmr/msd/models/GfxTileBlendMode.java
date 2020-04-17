@@ -1,4 +1,4 @@
-package lmr.msd.object;
+package lmr.msd.models;
 
 public enum GfxTileBlendMode {
     EMPTY(0),

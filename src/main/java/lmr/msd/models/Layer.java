@@ -1,7 +1,7 @@
-package lmr.msd.object;
+package lmr.msd.models;
 
-import lmr.msd.object.edit.LayerRectangleSelection;
-import lmr.msd.object.edit.LayerScatteredSelection;
+import lmr.msd.models.edit.LayerRectangleSelection;
+import lmr.msd.models.edit.LayerScatteredSelection;
 import lmr.msd.tilemap.TileMap;
 
 import java.awt.*;

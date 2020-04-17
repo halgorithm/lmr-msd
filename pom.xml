@@ -6,7 +6,7 @@
 
     <groupId>com.github.halgorithm</groupId>
     <artifactId>lmr-msd</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.1-SNAPSHOT</version>
     <name>lmr-msd</name>
     <description>Java package for editing La-Mulana Remake .msd files.</description>
     <url>https://github.com/halgorithm/lmr-msd</url>
@@ -35,8 +35,8 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub halgorithm Apache Maven Packages</name>
+            <id>lmr-msd</id>
+            <name>lmr-msd github repo</name>
             <url>https://maven.pkg.github.com/halgorithm/lmr-msd</url>
         </repository>
     </distributionManagement>

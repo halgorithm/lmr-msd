@@ -11,12 +11,32 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import lmr.msd.object.*;
+import lmr.msd.models.*;
 
 public abstract class MsdParse {
     @FunctionalInterface
     private interface SimpleParser<T> {
         T parse(ByteBuffer buffer);
+    }
+
+    public static Path getMainMsdsDir(Path gameDir) {
+        return Path.of(String.format("%s/data/mapdata", gameDir));
+    }
+
+    public static Path getMsdPath(Path msdsDir, String prefix, int id) {
+        return Path.of(String.format("%s/" + prefix + "%02d.msd", msdsDir, id));
+    }
+
+    public static List<Stage> parseMainGameMaps(Path gameDir) throws IOException {
+        var mainMsdsDir = getMainMsdsDir(gameDir);
+        var res = new ArrayList<Stage>(26);
+
+        for (int zoneId = 0; zoneId < 26; zoneId++) {
+            var mapPath = getMsdPath(mainMsdsDir, "map", zoneId);
+            res.add(parse(mapPath, true));
+        }
+
+        return res;
     }
 
     public static Stage parse(Path filePath) throws IOException {

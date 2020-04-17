@@ -1,4 +1,4 @@
-package lmr.msd.object;
+package lmr.msd.models;
 
 public final class AnimatedTileFrame {
     public short gfxIndex;

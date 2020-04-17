@@ -1,6 +1,6 @@
 package lmr.msd.validate;
 
-import lmr.msd.object.Stage;
+import lmr.msd.models.Stage;
 
 public abstract class MsdValidationException extends Exception {
     public final Stage stage;

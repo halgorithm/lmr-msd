@@ -1,4 +1,4 @@
-package lmr.msd.object;
+package lmr.msd.models;
 
 import java.util.List;
 
@@ -17,13 +17,23 @@ public class Scene {
         return primeLayerGroupIdx < layerGroups.size() ? layerGroups.get(primeLayerGroupIdx) : null;
     }
 
-    public short width() {
-        var primeGroup = primeGroup();
-        return (primeGroup == null) ? -1 : primeGroup.width();
+    public short widthInGfxTiles() {
+        return (short) (collision.width() / 2);
     }
 
-    public short height() {
-        var primeGroup = primeGroup();
-        return (primeGroup == null) ? -1 : primeGroup.height();
+    public short heightInGfxTiles() {
+        return (byte) (collision.height() / 2);
+    }
+
+    public byte widthInScreens() {
+        return (byte) (collision.width() / 64);
+    }
+
+    public byte heightInScreens() {
+        return (byte) (collision.height() / 48);
+    }
+
+    public byte screensCount() {
+        return (byte) (widthInScreens() * heightInScreens());
     }
 }

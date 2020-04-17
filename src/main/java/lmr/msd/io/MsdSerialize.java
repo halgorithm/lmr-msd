@@ -1,6 +1,6 @@
 package lmr.msd.io;
 
-import lmr.msd.object.*;
+import lmr.msd.models.*;
 import lmr.msd.validate.MsdValidation;
 import lmr.msd.validate.MsdValidationException;
 
@@ -14,10 +14,6 @@ public class MsdSerialize {
     @FunctionalInterface
     private interface Serializer<T>  {
         void serialize(DataOutputStream stream, T data) throws IOException;
-    }
-
-    public static void serialize(Stage stage) throws IOException, MsdValidationException {
-        serialize(stage, stage.filePath());
     }
 
     public static void serialize(Stage stage, Path filePath) throws IOException, MsdValidationException {
